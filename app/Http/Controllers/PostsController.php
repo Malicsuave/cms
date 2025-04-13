@@ -60,6 +60,10 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+
+
     public function edit($id)
     {
         //
@@ -87,4 +91,18 @@ class PostsController extends Controller
     {
         //
     }
+
+    public function contact()
+    {
+        $people = ['bakit kaya'];
+
+        return view('contact', compact('people')); // Use the view contact.blade.php
+    }
+
+
+    public function show_post($id, $name, $password)
+    {
+        return view('post', compact('id', 'name', 'password'));
+    }
+    //add method to be display in the view
 }
